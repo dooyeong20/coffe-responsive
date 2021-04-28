@@ -4,7 +4,7 @@
     "htmlhint": "htmlhint '**/*.html'",
     "watch:htmlhint": "SHELL=/bin/bash chokidar --initial --silent '**/*.html' -c 'npm run htmlhint'",
     "sass": "sass sass:css",
-    "watch:sass": "npm run sass -- --watch",
+    "watch:sass": "npm run scss -- --watch",
     "dev": "live-server",
     "build:sass": "npm run sass -- --no-source-map",
     "build:postcss": "postcss css/style.css -o css/style.css",
