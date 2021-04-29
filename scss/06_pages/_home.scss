@@ -1,3 +1,171 @@
 // 이디야 홈(메인 페이지) 시작 ------------------------------------------------------------- /
 
+.promotion {
+  @include desktop {
+    background: $grayscaleSnow;
+  }
+
+  &__inner {
+    @include desktop {
+      @include boxFixed(768px, 14px);
+      @include flexbox(row, center, $fw: nowrap);
+      padding-top: em(62px);
+      padding-bottom: em(63px);
+    }
+  }
+
+  &Youtube {
+    @include desktop {
+      width: 365px;
+      min-height: 205px;
+      background: $gradientBlue;
+    }
+
+    .iframeWrapper {
+      @include responsiveIframe();
+    }
+  }
+
+  &Notice {
+    position: relative;
+    @include flexbox($fw: nowrap);
+
+    &__title {
+      // display: block;
+      min-width: em(125px);
+      padding: em(15px) 0 0 em(15px);
+      background: $gradientBlue;
+      font-size: rem(15px);
+      font-weight: 700;
+      color: $grayscaleWhite;
+    }
+
+    &__section {
+      flex-grow: 1;
+      padding: em(15px) em(20px) em(15px) em(15px);
+      background: $grayscaleWhite;
+    }
+
+    &__subTitle {
+      font-weight: 700;
+      color: $primaryBlue;
+      margin: 0;
+    }
+
+    &__date {
+      font-size: rem(11px);
+      color: $grayscaleGray2;
+    }
+
+    &__brief {
+      font-size: rem(13px);
+      line-height: 1.5;
+      color: $grayscaleBlack2;
+      letter-spacing: -0.05em;
+      margin: 10px 0 0 0;
+    }
+
+    .buttonWrapper {
+      position: absolute;
+      bottom: 10px;
+      left: em(75px);
+      @include flexbox;
+    }
+  }
+
+  &News {
+    position: relative;
+    background-color: $primaryBlue;
+    color: $grayscaleWhite;
+    font-size: rem(13px);
+    padding: 15px;
+
+    &__title {
+      font-weight: bold;
+      margin: 0 0 15px 0;
+      font-size: rem(15px);
+      font-weight: 700;
+      color: $grayscaleWhite;
+    }
+
+    &__item {
+      @include flexbox(row, flex-start, center, nowrap);
+      margin-top: 5px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__headline {
+      flex-grow: 1;
+      margin-right: 25px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    &__date {
+      font-size: rem(12px);
+      min-width: 62px;
+    }
+
+    .svgLinkIconMore {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+  }
+
+  // &__inner {
+  //   @include desktop {
+  //     @include boxFixed;
+  //   }
+  // }
+
+  // &Youtube .iframe {
+  //   width: 100%;
+  //   height: 100vw * (9 / 16);
+
+  //   @include desktop {
+  //     width: 50%;
+  //     height: auto;
+  //   }
+  // }
+
+  // &__wrapper {
+  //   @include flexbox($d: colum);
+  // }
+
+  // &Notice {
+  //   @include flexbox($fw: nowrap);
+  // }
+
+  // &Notice__title {
+  //   box-sizing: border-box;
+  //   padding: em(5px);
+  //   display: block;
+  //   background: $gradientBlue;
+  //   color: white;
+  //   font-size: 1.5rem;
+  //   width: 30%;
+  //   height: 100%;
+  // }
+
+  // &Notice__section {
+  //   box-sizing: border-box;
+  //   padding: em(5px);
+  //   width: 70%;
+  //   display: block;
+  // }
+
+  // &Notice__subTitle {
+  //   font-size: 1.5rem;
+  //   color: $primaryBlue6;
+  // }
+
+  // &News {
+  //   background: $primaryBlue7;
+  // }
+}
 // 이디야 홈(메인 페이지) 종료 ------------------------------------------------------------------ /
