@@ -1,3 +1,53 @@
 // 푸터 시작 --------------------------------------------------------------------- /
+.footer {
+  color: rgb(220, 220, 220);
+  background: rgb(65, 65, 65);
 
+  &__inner {
+    max-width: em(740px);
+    @include autoMargin;
+    @include flexbox($d: column, $ai: center);
+  }
+
+  .privacy {
+    width: 100%;
+    order: -1;
+    padding: em(20px) 0;
+
+    &__list {
+      @include flexbox($jc: space-around);
+      padding: em(10px) 0;
+
+      @include mobile {
+        justify-content: center;
+      }
+    }
+
+    &__item {
+      text-align: center;
+      @include mobile {
+        display: inline-block;
+        padding: 0 em(10px);
+      }
+    }
+  }
+
+  &__logo {
+    text-align: center;
+    padding: em(20px);
+  }
+
+  .address {
+    @include flexbox($jc: center);
+    line-height: 1.6;
+    &__content {
+      display: inline-block;
+      margin: 0 em(4px);
+    }
+  }
+
+  .copyright {
+    padding: em(15px) 0;
+  }
+}
 // 푸터 종료 --------------------------------------------------------------------- /

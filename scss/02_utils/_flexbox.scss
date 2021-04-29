@@ -1,1 +1,8 @@
 // 플렉스 박스 믹스인 ---------------------------------------------------------------- /
+@mixin flexbox($d: row, $jc: flex-start, $ai: stretch, $fw: wrap) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-wrap: $fw;
+}
