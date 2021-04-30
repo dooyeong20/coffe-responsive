@@ -674,15 +674,23 @@ button,
 .membership .input {
   background: none;
   display: inline-block;
+  color: #fefefe;
   border: none;
   width: 100%;
   height: 100%;
+  padding-left: 5em;
+  transition: all 0.4s;
+}
+.membership .input:-webkit-autofill, .membership .input:-webkit-autofill:hover, .membership .input:-webkit-autofill:focus, .membership .input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
 }
 .membership .input:focus {
   outline: none;
+  padding-left: 0;
 }
 .membership .input:focus + .label {
-  top: 0;
+  top: -0.625em;
   left: 0;
   font-size: 0.8rem;
 }
@@ -731,6 +739,9 @@ button,
   }
 }
 
+/*
+멤버십 언더언더 타이틀
+*/
 .ediya {
   display: flex;
   flex-direction: column;
@@ -1117,11 +1128,46 @@ button,
 }
 
 .signin {
-  background: url(../images/coffee-desktop.jpg) no-repeat center;
-  background-size: cover;
-  box-sizing: border-box;
+  flex: 1 1 0;
+  color: #fefefe;
   padding: 1.25em;
-  flex-grow: 1;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+@media screen and (max-width: 767px) {
+  .signin {
+    background-image: url(../images/coffee-mobile.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .signin {
+    background-image: url(../images/coffee-desktop.jpg);
+  }
+}
+
+.videoBgContainer {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #222;
+}
+.videoBgContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(51, 47, 43, 0.5) 0%, rgba(50, 46, 42, 0.1) 100%);
+}
+.videoBgContainer .video {
+  /* IE 미지원 */
+  object-fit: cover;
+  object-position: center;
 }
 
 /*# sourceMappingURL=style.css.map */
