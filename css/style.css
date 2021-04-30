@@ -633,6 +633,104 @@ button,
   content: "×";
 }
 
+.membership {
+  color: white;
+  margin: 0 auto;
+  width: 80%;
+  min-width: 375px;
+  text-align: center;
+  font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  .membership {
+    max-width: 540px;
+  }
+}
+.membership__title {
+  margin: 1.25em 0 0.625em 0;
+  font-size: 3rem;
+}
+.membership__enDescription {
+  font-size: 1.6rem;
+  font-font-weight: 800;
+  margin-bottom: 0.3125em;
+}
+.membership__description {
+  font-size: 1rem;
+}
+.membership .memberForm {
+  margin-top: 6.25em;
+}
+.membership .formControl {
+  position: relative;
+  height: 2.5em;
+}
+.membership .formControl:first-child {
+  margin-bottom: 1.875em;
+}
+.membership .formControl:nth-child(-n+2) {
+  border-bottom: 1px solid white;
+}
+.membership .input {
+  background: none;
+  display: inline-block;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.membership .input:focus {
+  outline: none;
+}
+.membership .input:focus + .label {
+  top: 0;
+  left: 0;
+  font-size: 0.8rem;
+}
+.membership .label:not(:last-child) {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  transition: all 0.2s;
+}
+.membership .errorMessage {
+  display: none;
+}
+.membership__saveEmail {
+  display: flex;
+  align-items: center;
+}
+.membership__saveEmail.formControl {
+  height: auto;
+}
+.membership__buttons {
+  display: flex;
+  flex-flow: column wrap;
+}
+.membership__buttons .button {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: lightgray;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 0.625em;
+  margin-top: 0.9375em;
+}
+.membership__buttons .button .icon {
+  background: url(../../images/icon-arrow-disabled.svg) no-repeat center;
+  vertical-align: middle;
+  float: right;
+}
+@media screen and (min-width: 768px) {
+  .membership__buttons {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .membership__buttons .button {
+    width: 45%;
+  }
+}
+
 .ediya {
   display: flex;
   flex-direction: column;
@@ -643,6 +741,11 @@ button,
 }
 .main {
   flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .footer {
@@ -1011,6 +1114,14 @@ button,
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+.signin {
+  background: url(../images/coffee-desktop.jpg) no-repeat center;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 1.25em;
+  flex-grow: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
